@@ -1,6 +1,20 @@
 # EasyBanking
 simulation of Banking API
 
+Database: Used EF code first migration
+Change the connection string "EasyBankingDBConnection" to point to the relevant database.
+Use update-database command in package manager console to get the database tables created
+
+API's: 
+API can be tested using the swagger Ui. 
+To Create a transaction(Debit or Credit) , Please use the  Json request similar to the sample below:
+TransactionTypeId : 1 means Credit 
+TransactionTypeId: 2 means Debit (Refer TransactionType Table script in migrations)
+
+Json Sample for Create:
+ {   "TransactionAmount": 1000.0, "TransactionCurrency":"EUR",  "AccountId": 1,   "TransactedBy": null,   "LastUpdatedBy": null, TransactionTypeId:1 }
+ 
+
 Transaction List Api: 
 
 Gets the list of all created transactions.
